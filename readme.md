@@ -42,8 +42,8 @@ Contributions are welcome! Please open an issue or submit a pull request for any
 - JavaScript
 
 ## Screenshots
-![Add Todo](static\ss1.png)
-![Todo List](static\ss2.png)
+![Add Todo](static/ss1.png)
+![Todo List](static/ss2.png)
 
 ## License
 This project is licensed under the MIT License.
