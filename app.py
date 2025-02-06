@@ -3,14 +3,11 @@ from datetime import datetime
 import firebase_admin
 from firebase_admin import db
 import json
-from dotenv import load_dotenv
 import os
 
-load_dotenv()
-service_account_key_path = os.getenv('SERVICE_ACCOUNT_KEY_PATH')
 app = Flask(__name__)
 
-cred_obj = firebase_admin.credentials.Certificate(service_account_key_path)
+cred_obj = firebase_admin.credentials.Certificate('/etc/secrets/key.json')
 firebase_admin.initialize_app(cred_obj, {'databaseURL': 'https://todolist-acfee-default-rtdb.firebaseio.com/'})
 
 todo_ref = db.reference('todos')
